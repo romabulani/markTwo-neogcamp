@@ -104,6 +104,7 @@ for(var i=0; i<questionAnswerArray.length; i++){
   if(i==4){
     if(score>=3){
     console.log(chalk.green.bold("Congratulations " + userName + "! You cleared Level One\n"));
+      score = 0;
     continue;
    
     }
@@ -114,8 +115,9 @@ for(var i=0; i<questionAnswerArray.length; i++){
   }
 
     if(i==9){
-    if(score>=6){
+    if(score>=3){
     console.log(chalk.green.bold("Congratulations " + userName + "! You cleared Level Two\n"));
+      score = 0;
     continue;
     }
     else{
@@ -126,7 +128,7 @@ for(var i=0; i<questionAnswerArray.length; i++){
   
 
   if(i==14){
-    if(score>=9){
+    if(score>=3){
       console.log(chalk.green.bold("Congratulations " + userName + "! You are the ULTIMATE OFFICE FAN"));
     }
     else{
