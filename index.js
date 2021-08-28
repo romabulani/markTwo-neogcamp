@@ -91,6 +91,14 @@ for(var i=0; i<questionAnswerArray.length; i++){
   console.log(chalk.white.bold(questionAnswerArray[i].question+"\n"));
   console.log(chalk.yellow.bold(questionAnswerArray[i].options+"\n"));
   var userAnswer = readlinesync.question(chalk.white.bold("Enter your answer: "));
+   while(true){
+    if(userAnswer.toLowerCase() !== 'a' && userAnswer.toLowerCase() !== 'b' && userAnswer.toLowerCase() !== 'c'){
+      console.log(chalk.red.bold("Please Enter Valid Option!!"));
+      userAnswer = readlinesync.question(chalk.white.bold("Enter your answer: "));
+    }
+    else
+      break;
+  }
   if(userAnswer.toLowerCase()===questionAnswerArray[i].answer){
     score+=1;
     console.log(chalk.green.bold("Correct!"));
